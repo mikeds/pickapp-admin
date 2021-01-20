@@ -68,7 +68,7 @@ switch( strtolower(get_controller()) ) {
 		);
 	break;
 
-	case 'church_branches' : 
+	case 'branches' : 
 		$config = array(
 			'validate' => array(
 				array( 	

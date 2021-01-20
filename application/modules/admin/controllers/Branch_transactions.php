@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Church_transactions extends Admin_Controller {
+class Branch_transactions extends Admin_Controller {
 	public function after_init() {
 		$this->load->model('admin/oauth_bridges_model', 'bridges');
 		$this->load->model('admin/transactions_model', 'transactions');
@@ -10,7 +10,7 @@ class Church_transactions extends Admin_Controller {
 	}
 
 	public function index($page = 1) {
-		$this->_data['form_url'] = base_url() . "church-transactions";
+		$this->_data['form_url'] = base_url() . "admin-transactions";
 		$branch_no = "";
 
 		$actions = array();
@@ -87,7 +87,7 @@ SQL;
 		);
 
 		$this->_data['listing'] 	= $this->table_listing('', $filtered_results, $total_rows, $offset, $this->_limit, $actions, 2);
-		$this->_data['title']  		= "Church Transactions";
+		$this->_data['title']  		= "Admin Transactions";
 		$this->set_template("church_transactions/list", $this->_data);
 	}
 

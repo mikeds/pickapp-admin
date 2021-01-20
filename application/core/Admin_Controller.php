@@ -72,41 +72,41 @@ class Admin_Controller extends Admin_Core_Controller {
 		);
 
 		$menu_items[] = array(
-			'menu_id'			=> 'pastors',
-			'menu_title'		=> 'Pastors',
-			'menu_url'			=> 	base_url() . "pastors",
+			'menu_id'			=> 'merchants',
+			'menu_title'		=> 'Merchants',
+			'menu_url'			=> 	base_url() . "merchants",
 			'menu_controller'	=> 'pastors',
 			'menu_icon'			=> 'view-dashboard',
 		);
 
 		$menu_items[] = array(
-			'menu_id'			=> 'church-branches',
-			'menu_title'		=> 'Church Branches',
-			'menu_url'			=> 	base_url() . "church-branches",
+			'menu_id'			=> 'branches',
+			'menu_title'		=> 'Branches',
+			'menu_url'			=> 	base_url() . "branches",
 			'menu_controller'	=> 'church_branches',
 			'menu_icon'			=> 'view-dashboard',
 		);
 
-		$menu_items[] = array(
-			'menu_id'			=> 'church-leaders',
-			'menu_title'		=> 'Church Leaders',
-			'menu_url'			=> 	base_url() . "church-leaders",
-			'menu_controller'	=> 'church_leaders',
-			'menu_icon'			=> 'view-dashboard',
-		);
+		// $menu_items[] = array(
+		// 	'menu_id'			=> 'church-leaders',
+		// 	'menu_title'		=> 'Church Leaders',
+		// 	'menu_url'			=> 	base_url() . "church-leaders",
+		// 	'menu_controller'	=> 'church_leaders',
+		// 	'menu_icon'			=> 'view-dashboard',
+		// );
 
 		$menu_items[] = array(
-			'menu_id'			=> 'church-transactions',
-			'menu_title'		=> 'Church Transactions',
-			'menu_url'			=> 	base_url() . "church-transactions",
+			'menu_id'			=> 'branch-transactions',
+			'menu_title'		=> 'Branch Transactions',
+			'menu_url'			=> 	base_url() . "branch-transactions",
 			'menu_controller'	=> 'church_transactions',
 			'menu_icon'			=> 'view-dashboard',
 		);
 
 		$menu_items[] = array(
-			'menu_id'			=> 'pastor-transactions',
-			'menu_title'		=> 'Pastor Transactions',
-			'menu_url'			=> 	base_url() . "pastor-transactions",
+			'menu_id'			=> 'merchant-transactions',
+			'menu_title'		=> 'Merchant Transactions',
+			'menu_url'			=> 	base_url() . "merchant-transactions",
 			'menu_controller'	=> 'pastor_transactions',
 			'menu_icon'			=> 'view-dashboard',
 		);

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pastors extends Admin_Controller {
+class Merchants extends Admin_Controller {
 	public function after_init() {
 
 		$this->load->model('admin/pastor_accounts_model', 'accounts');
@@ -52,7 +52,7 @@ class Pastors extends Admin_Controller {
 	    $results = $this->accounts->get_data($select, $where, array(), $inner_joints, array('filter'=>'account_fname', 'sort'=>'ASC'), $offset, $this->_limit);
 
 		$this->_data['listing'] = $this->table_listing('', $results, $total_rows, $offset, $this->_limit, $actions, 2);
-		$this->_data['title']  = "Pastors";
+		$this->_data['title']  = "Merchants";
 		$this->set_template("pastors/list", $this->_data);
 	}
 }

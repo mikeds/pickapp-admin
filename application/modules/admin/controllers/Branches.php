@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Church_branches extends Admin_Controller {
+class Branches extends Admin_Controller {
 	public function after_init() {
 		$this->load->model('admin/church_branches_model', 'branches');
 		$this->load->model('admin/oauth_bridges_model', 'bridges');
@@ -10,8 +10,8 @@ class Church_branches extends Admin_Controller {
 	}
 
 	public function index($page = 1) {
-		$this->_data['add_label']= "New Church Branch";
-		$this->_data['add_url']	 = base_url() . "church-branches/new";
+		$this->_data['add_label']= "New Branch";
+		$this->_data['add_url']	 = base_url() . "branches/new";
 
 		$actions = array(
 			'update'
@@ -41,12 +41,12 @@ class Church_branches extends Admin_Controller {
 	    $results = $this->branches->get_data($select, $where, array(), $inner_joints, array('filter'=>'cbranch_name', 'sort'=>'ASC'), $offset, $this->_limit);
 
 		$this->_data['listing'] = $this->table_listing('', $results, $total_rows, $offset, $this->_limit, $actions, 2);
-		$this->_data['title']  = "Church Branches";
+		$this->_data['title']  = "Branches";
 		$this->set_template("branches/list", $this->_data);
 	}
 
 	public function new() {
-		$this->_data['form_url']		= base_url() . "church-branches/new";
+		$this->_data['form_url']		= base_url() . "branches/new";
 		$this->_data['notification'] 	= $this->session->flashdata('notification');
 
 		if ($_POST) {
@@ -104,14 +104,14 @@ class Church_branches extends Admin_Controller {
 			}
 		}
 
-		$this->_data['title']  = "New Church Branch";
+		$this->_data['title']  = "New Branch";
 		$this->set_template("branches/form", $this->_data);
 	}
 
 	public function update($id) {
-		$this->_data['form_url']		= base_url() . "church-branches/update/{$id}";
+		$this->_data['form_url']		= base_url() . "branches/update/{$id}";
 		$this->_data['notification'] 	= $this->session->flashdata('notification');
-		$back_url = base_url() . "church-branches";
+		$back_url = base_url() . "branches";
 
 		$row = $this->branches->get_datum(
 			'',
@@ -154,7 +154,7 @@ class Church_branches extends Admin_Controller {
 		}
 
 		$this->_data['is_update'] 	= true;
-		$this->_data['title']  		= "Update Church Branch";
+		$this->_data['title']  		= "Update Branch";
 		$this->set_template("branches/form", $this->_data);
 	}
 }
