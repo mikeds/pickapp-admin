@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pastor_transactions extends Admin_Controller {
+class Merchant_transactions extends Admin_Controller {
 	public function after_init() {
 		$this->load->model('admin/oauth_bridges_model', 'bridges');
 		$this->load->model('admin/transactions_model', 'transactions');
